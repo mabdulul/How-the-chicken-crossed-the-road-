@@ -7,6 +7,7 @@ import pygame as pg
 import random
 from settings import *
 from sprites import *
+from obstacles import *
 import os
 
 game_folder = os.path.dirname(__file__)
@@ -27,6 +28,8 @@ class Game:
         self.all_sprites = pg.sprite.Group()
         self.player = Player()
         self.all_sprites.add(self.player)
+        self.badguy = Obstacles()
+        self.all_sprites.add(self.badguy)
         self.run()
 
 
